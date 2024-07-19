@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 const LoginPage = () => {
   return (
     <>
-      <MainComponent></MainComponent>
+      <MainComponent>asdf</MainComponent>
     </>
   );
 };
@@ -11,8 +11,10 @@ const LoginPage = () => {
 export default LoginPage;
 
 const MainComponent = styled.div`
-  background-image: url("../public/background-images/login.png");
+  background-image: url("../../../public/background-images/login.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
 `;
