@@ -1,7 +1,12 @@
 import "./App.css";
+import { LoginPage } from "./components/Login/LoginPage.js";
 
 function App() {
-  return <div className="App">asdf</div>;
+  return (
+    <div className="App">
+      <LoginPage />
+    </div>
+  );
 }
 
 export default App;
