@@ -6,6 +6,7 @@ import Champions from "./Champions/Champions";
 import TeamChamps from "./Team-Champs/TeamChamps";
 import Shop from "./Shop/Shop";
 import PracticeTracks from "./Practice-Tracks/PracticeTracks";
+import Questions from "./Questions/Questions";
 
 export {
   LoginPage,
@@ -16,4 +17,5 @@ export {
   TeamChamps,
   Shop,
   PracticeTracks,
+  Questions,
 };

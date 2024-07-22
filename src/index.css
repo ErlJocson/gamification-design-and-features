@@ -1,9 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family: Speedee, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif;
+  /* font-family: Speedee, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif; */
   margin: 0;
   padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+body {
+  font-family: "Russo One", sans-serif;
 }
 
 body {
@@ -12,4 +18,11 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.text-gradient {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#9c99ff, #0f1eed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
