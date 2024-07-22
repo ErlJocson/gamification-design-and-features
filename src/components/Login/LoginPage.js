@@ -4,10 +4,9 @@ const LoginPage = () => {
   return (
     <>
       <MainComponent>
-        <LoginFormContainer>
-          <LoginForm>
-            <img src="/logo/hgs.svg" alt="" width="300" />
-            <h3>Member Login</h3>
+        <LoginForm>
+          <img src="/logo/hgs.svg" alt="" width="300" />
+          <InputContainer>
             <div>
               <input type="text" placeholder="Username" />
             </div>
@@ -17,8 +16,8 @@ const LoginPage = () => {
             <div>
               <input type="submit" value="LOGIN" />
             </div>
-          </LoginForm>
-        </LoginFormContainer>
+          </InputContainer>
+        </LoginForm>
       </MainComponent>
     </>
   );
@@ -33,26 +32,29 @@ const MainComponent = styled.div`
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
+  position: relative;
 `;
 
 const LoginForm = styled.form`
+  height: 140px;
   color: white;
-  background-color: rgba(29, 26, 27, 0.94);
-  width: 300px;
-  padding: 50px;
+  background-color: rgba(54, 54, 54, 0.94);
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 25px;
-  img {
-    margin: 16px 0;
-  }
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+`;
 
+const InputContainer = styled.div`
   div {
     margin: 10px 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     input {
       font-size: 15px;
       line-height: 1.5;
@@ -63,13 +65,21 @@ const LoginForm = styled.form`
       border-radius: 25px;
       padding: 5px 20px;
     }
-  }
-`;
 
-const LoginFormContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-right: 200px;
+    input[type="text"],
+    input[type="password"] {
+      width: 300px;
+    }
+
+    input[type="submit"] {
+      background-color: #0c84af;
+      color: white;
+      cursor: pointer;
+      transition: all 500ms;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00b0f0;
+    }
+  }
 `;
