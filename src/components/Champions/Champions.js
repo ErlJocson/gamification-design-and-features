@@ -33,7 +33,7 @@ const Champions = () => {
               <table>
                 <FirstTableRow>
                   <th>Rank</th>
-                  <th>Employee name</th>
+                  <th>Driver</th>
                   <th>Score</th>
                 </FirstTableRow>
                 {links.map((link, index) => (
