@@ -1,46 +1,50 @@
-import styled from "styled-components";
+import { FaRankingStar } from "react-icons/fa6";
+import { FaTrophy } from "react-icons/fa";
+import { RiTeamLine } from "react-icons/ri";
+import { FaShoppingCart } from "react-icons/fa";
+import { ImRoad } from "react-icons/im";
+import { BiCalendarExclamation } from "react-icons/bi";
+import { NavbarContainer, LeftItems, RightItems, MyLink } from "./NarbarStyles";
+import { IoMdHome } from "react-icons/io";
 
 export default function Navbar() {
   return (
     <>
       <NavbarContainer>
         <LeftItems>
-          <p>YOUR STANDINGS</p>
-          <p>CHAMPIONS</p>
-          <p>TEAM CHAMPS</p>
-          <p>SHOP</p>
-          <p>PRACTICE TRACKS</p>
+          <p>
+            <IoMdHome />
+            <MyLink to="/">HOME</MyLink>
+          </p>
+          <p>
+            <FaRankingStar />
+            <MyLink to="/your-standing">YOUR STANDINGS</MyLink>
+          </p>
+          <p>
+            <FaTrophy />
+            <MyLink to="/champions">CHAMPIONS</MyLink>
+          </p>
+          <p>
+            <RiTeamLine />
+            <MyLink to="/team-champs">TEAM CHAMPS</MyLink>
+          </p>
+          <p>
+            <FaShoppingCart />
+            <MyLink>SHOP</MyLink>
+          </p>
+          <p>
+            <ImRoad />
+            <MyLink>PRACTICE TRACKS</MyLink>
+          </p>
         </LeftItems>
 
         <RightItems>
-          <p>CHALLENGES</p>
+          <p>
+            <BiCalendarExclamation />
+            <MyLink>CHALLENGES</MyLink>
+          </p>
         </RightItems>
       </NavbarContainer>
     </>
   );
 }
-
-const NavbarContainer = styled.div`
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 80px;
-  color: white;
-  background-color: rgba(54, 54, 54, 0.94);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const LeftItems = styled.div`
-  display: flex;
-  margin-left: 100px;
-  p {
-    margin: 0 10px;
-  }
-`;
-
-const RightItems = styled.div`
-  margin-right: 100px;
-`;

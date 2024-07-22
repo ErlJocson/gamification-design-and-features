@@ -1,30 +1,57 @@
 import React from "react";
-import styled from "styled-components";
+
+import { IoCall } from "react-icons/io5";
+import {
+  MainPageContainer,
+  ContentContainer,
+  SomeContainer,
+  MetricContainer,
+  MetricTable,
+} from "./MainPageStyles";
 
 export default function MainPage() {
   return (
     <>
       <MainPageContainer>
         <ContentContainer>
-          <h3>Rohit Sharma</h3>
-          <p>Performance of the month of June</p>
-          <div></div>
+          <SomeContainer>
+            <MetricContainer>
+              <h2>ROHIT SHARMA</h2>
+              <h3>Performance for the month of June</h3>
+              <MetricTable>
+                <div>
+                  <p>
+                    <IoCall />
+                    <strong>Metric 1</strong>
+                  </p>
+                  <p>100%</p>
+                </div>
+                <div>
+                  <p>
+                    <IoCall />
+                    <strong>Metric 1</strong>
+                  </p>
+                  <p>100%</p>
+                </div>
+                <div>
+                  <p>
+                    <IoCall />
+                    <strong>Metric 1</strong>
+                  </p>
+                  <p>100%</p>
+                </div>
+                <div>
+                  <p>
+                    <IoCall />
+                    <strong>Metric 1</strong>
+                  </p>
+                  <p>100%</p>
+                </div>
+              </MetricTable>
+            </MetricContainer>
+          </SomeContainer>
         </ContentContainer>
       </MainPageContainer>
     </>
   );
 }
-
-const MainPageContainer = styled.div`
-  height: calc(100vh - 80px);
-  background-image: url("/background-images/your-standing.png");
-  background-position: center;
-  background-size: cover;
-`;
-
-const ContentContainer = styled.div`
-  height: calc(100vh - 80px);
-  margin-top: 100px;
-  width: 80%;
-  margin: 0 auto;
-`;
