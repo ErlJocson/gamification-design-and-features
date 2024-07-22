@@ -23,10 +23,13 @@ const Champions = () => {
           </NameContainer>
           <MainContentContainer>
             <PictureContainer>
-              <ImageContainer src="" alt="" />
+              <ImageContainer
+                src={process.env.PUBLIC_URL + "/background-images/avatar.png"}
+                alt=""
+              />
               <ScoreContainer>
                 <h3>Overall Score</h3>
-                <p>100%</p>
+                <p className="text-gradient">100%</p>
               </ScoreContainer>
             </PictureContainer>
             <OverallRankingContainer>
@@ -49,19 +52,19 @@ const Champions = () => {
               <h1>Metric Scores</h1>
               <div>
                 <h3>AHT</h3>
-                <p>300s</p>
+                <p className="text-gradient">300s</p>
               </div>
               <div>
                 <h3>ATR</h3>
-                <p>5%</p>
+                <p className="text-gradient">5%</p>
               </div>
               <div>
                 <h3>CSAT</h3>
-                <p>100%</p>
+                <p className="text-gradient">100%</p>
               </div>
               <div>
                 <h3>IR</h3>
-                <p>NA</p>
+                <p className="text-gradient">NA</p>
               </div>
             </MetricScores>
           </MainContentContainer>

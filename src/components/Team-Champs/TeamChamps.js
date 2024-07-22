@@ -16,13 +16,13 @@ const TeamChamps = () => {
           <ContentContainer>
             <h3>Bose</h3>
             <h1>Rohit Sharma</h1>
-            <h1>1st Rank</h1>
+            <h1>2nd Rank</h1>
             <TableContainer>
               <TeamTable>
                 <TableRowHeader>
                   <th>Rank</th>
                   <th>Driver</th>
-                  <th>Metric</th>
+                  <th>Team Lead</th>
                   <th>Score</th>
                 </TableRowHeader>
                 {links.map((link, index) => (

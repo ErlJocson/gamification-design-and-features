@@ -2,20 +2,16 @@ import styled from "styled-components";
 
 export const MainContentContainerShop = styled.div`
   height: calc(100vh - 80px);
-  background-image: url("/background-images/garage.jpg");
-  background-position: center;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const MainContents = styled.div`
+  height: 100%;
   width: 80%;
   margin: auto;
-  background-color: #cec8b88a;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Top = styled.div`
@@ -25,18 +21,16 @@ export const Top = styled.div`
 `;
 
 export const DriverName = styled.h1`
-  margin-left: 20px;
+  color: white;
 `;
 
 export const DriverEarnings = styled.h1`
-  margin-right: 20px;
+  color: white;
 `;
-
-export const CarouselContainer = styled.div``;
 
 export const NavigationButtons = styled.div`
   button {
-    padding: 5px 10px;
+    padding: 5px 25px;
     margin: 0 10px;
     border: none;
     cursor: pointer;
@@ -52,9 +46,7 @@ export const Carousel = styled.div`
 `;
 
 export const ContentContainers = styled.div`
-  height: 80%;
-
-  margin: auto;
+  margin: 0 auto;
   width: 80%;
   display: flex;
   flex-direction: column;

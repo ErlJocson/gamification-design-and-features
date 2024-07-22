@@ -14,8 +14,6 @@ export const MainPageContainerChampions = styled.div`
 
 export const ContentContainer = styled.div`
   margin: 50px auto;
-  background-color: #cec8b88a;
-
   width: 80%;
   height: calc(100vh - 200px);
 `;
@@ -23,6 +21,7 @@ export const ContentContainer = styled.div`
 export const NameContainer = styled.div`
   width: 100%;
   display: flex;
+  color: white;
   justify-content: space-between;
   h2 {
     margin: 0 20px;
@@ -31,7 +30,7 @@ export const NameContainer = styled.div`
 `;
 
 export const MainContentContainer = styled.div`
-  height: 80%;
+  height: 100%;
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
@@ -47,19 +46,19 @@ export const ScoreContainer = styled.div`
   justify-content: space-evenly;
   color: black;
   text-align: center;
+  h3 {
+    font-size: 20px;
+    color: white;
+  }
   p {
     font-size: 50px;
     font-weight: bold;
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.img`
   width: 200px;
   height: 250px;
-  background-image: url("/background-images/avatar.png");
-  background-position: center;
-  background-size: cover;
-  border-radius: 25px;
 `;
 
 export const OverallRankingContainer = styled.div`
@@ -72,7 +71,7 @@ export const OverallRankingContainer = styled.div`
   }
 
   table {
-    background-color: white;
+    background-color: #ffffff9a;
   }
   tr {
     * {
@@ -93,18 +92,19 @@ export const MetricScores = styled.div`
 
   h1 {
     text-align: center;
+    color: white;
   }
 
   div {
     text-align: center;
-    background-color: white;
+    background-color: #00000081;
     margin: 10px;
     padding: 5px 0;
     min-width: 200px;
-    background-color: rgba(255, 255, 255, 0.6);
 
     h3 {
       font-size: 20px;
+      color: white;
     }
 
     p {

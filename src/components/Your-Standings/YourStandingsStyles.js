@@ -13,17 +13,21 @@ export const MainPageContainerYourStanding = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  margin: 50px auto;
-  background-color: #cec8b88a;
+  margin: 0 auto;
 
   width: 80%;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const NameContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  color: white;
   h2 {
     margin: 0 20px;
     margin-top: 10px;
@@ -32,15 +36,16 @@ export const NameContainer = styled.div`
 
 export const StandingContainer = styled.div`
   width: 100%;
-  height: 90%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 export const ImageAndRankContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 20px;
   align-items: center;
   @media screen and (max-width: 1000px) {
     img,
@@ -65,25 +70,19 @@ export const ImageAndRankContainer = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.img`
   width: 150px;
   height: 200px;
-  background-image: url("/background-images/avatar.png");
-  background-position: center;
-  background-size: cover;
-  margin-left: 300px;
-  border-radius: 25px;
 `;
 
 export const RankContainer = styled.div`
-  margin-right: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 150px;
   height: 200px;
-  border-radius: 25px;
+
   background-color: rgb(255, 255, 255);
 
   h3 {
@@ -104,11 +103,11 @@ export const ScoreCardsContainer = styled.div`
 export const ScoreCards = styled.div`
   text-align: center;
   margin: 8px;
-  background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
 
   h3 {
     font-size: 15px;
+    color: white;
   }
 
   p {

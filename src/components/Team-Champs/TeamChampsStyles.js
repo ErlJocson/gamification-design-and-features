@@ -16,8 +16,11 @@ export const ContentContainer = styled.div`
   height: 80%;
   margin: 50px auto;
   width: 80%;
-  background-color: #cec8b88a;
   padding: 20px;
+  h3,
+  h1 {
+    color: white;
+  }
 `;
 
 export const MainContentContainer = styled.div`
@@ -34,7 +37,8 @@ export const TableRowHeader = styled.tr`
 
 export const TeamTable = styled.table`
   margin: 10px auto 0 auto;
-  background-color: white;
+  width: 100%;
+  background-color: #ffffff6e;
 
   tr {
     * {

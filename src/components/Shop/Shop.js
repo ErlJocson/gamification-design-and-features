@@ -1,7 +1,6 @@
 import {
   MainContentContainerShop,
   NavigationButtons,
-  CarouselContainer,
   Top,
   Carousel,
   DriverName,
@@ -32,10 +31,10 @@ export default function Shop() {
     );
   };
 
-  const visibleSlides = pictures.slice(index, index + 3);
+  const visibleSlides = pictures.slice(index, index + 5);
 
-  if (visibleSlides.length < 3) {
-    visibleSlides.push(...pictures.slice(0, 3 - visibleSlides.length));
+  if (visibleSlides.length < 5) {
+    visibleSlides.push(...pictures.slice(0, 5 - visibleSlides.length));
   }
 
   return (
@@ -47,20 +46,19 @@ export default function Shop() {
             <DriverEarnings>Earnings: 1000</DriverEarnings>
           </Top>
           <ContentContainers>
-            <CarouselContainer>
-              <Carousel>
-                {visibleSlides.map((picture, i) => (
-                  <img
-                    src={picture}
-                    key={i}
-                    alt=""
-                    style={{
-                      width: i === 1 ? "200px" : "150px",
-                    }}
-                  />
-                ))}
-              </Carousel>
-            </CarouselContainer>
+            <Carousel>
+              {visibleSlides.map((picture, i) => (
+                <img
+                  src={picture}
+                  key={i}
+                  alt=""
+                  style={{
+                    width: i === 2 ? "200px" : "150px",
+                  }}
+                />
+              ))}
+            </Carousel>
+
             <NavigationButtons>
               <button onClick={handleBack}>Back</button>
               <button>Buy</button>
