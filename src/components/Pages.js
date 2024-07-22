@@ -7,6 +7,7 @@ import TeamChamps from "./Team-Champs/TeamChamps";
 import Shop from "./Shop/Shop";
 import PracticeTracks from "./Practice-Tracks/PracticeTracks";
 import Questions from "./Questions/Questions";
+import Challenges from "./Challenges/Challenges";
 
 export {
   LoginPage,
@@ -18,4 +19,5 @@ export {
   Shop,
   PracticeTracks,
   Questions,
+  Challenges as Challenge,
 };

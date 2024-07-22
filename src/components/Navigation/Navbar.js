@@ -41,7 +41,7 @@ export default function Navbar() {
         <RightItems>
           <p>
             <BiCalendarExclamation />
-            <MyLink>CHALLENGES</MyLink>
+            <MyLink to="/challenges">CHALLENGES</MyLink>
           </p>
         </RightItems>
       </NavbarContainer>

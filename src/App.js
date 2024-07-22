@@ -8,6 +8,7 @@ import {
   TeamChamps,
   Shop,
   PracticeTracks,
+  Challenge,
 } from "./components/Pages";
 import {
   HashRouter as Router,
@@ -31,6 +32,7 @@ function RouterComponent() {
         <Route path="/team-champs" exact element={<TeamChamps />} />
         <Route path="/shop" exact element={<Shop />} />
         <Route path="/practice-tracks" exact element={<PracticeTracks />} />
+        <Route path="/challenges" exact element={<Challenge />} />
       </Routes>
     </>
   );
