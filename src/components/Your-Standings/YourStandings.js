@@ -10,6 +10,7 @@ import {
   ImageContainer,
   ScoreCardsContainer,
 } from "./YourStandingsStyles";
+import { PiRankingBold } from "react-icons/pi";
 
 const YourStandings = () => {
   return (
@@ -24,7 +25,10 @@ const YourStandings = () => {
             <ImageAndRankContainer>
               <ImageContainer src="" />
               <RankContainer>
-                <h1>RANK</h1>
+                <h1>
+                  <PiRankingBold />
+                  RANK
+                </h1>
                 <h3>02</h3>
               </RankContainer>
             </ImageAndRankContainer>

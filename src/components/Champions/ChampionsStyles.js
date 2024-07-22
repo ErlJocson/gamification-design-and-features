@@ -14,7 +14,7 @@ export const MainPageContainerChampions = styled.div`
 
 export const ContentContainer = styled.div`
   margin: 50px auto;
-  background-color: rgba(54, 54, 54, 0.6);
+  background-color: #cec8b88a;
 
   width: 80%;
   height: calc(100vh - 200px);
@@ -27,12 +27,11 @@ export const NameContainer = styled.div`
   h2 {
     margin: 0 20px;
     margin-top: 10px;
-    color: white;
   }
 `;
 
 export const MainContentContainer = styled.div`
-  height: 100%;
+  height: 80%;
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
@@ -46,16 +45,17 @@ export const PictureContainer = styled.div`
 
 export const ScoreContainer = styled.div`
   justify-content: space-evenly;
-  color: white;
-
+  color: black;
+  text-align: center;
   p {
     font-size: 50px;
+    font-weight: bold;
   }
 `;
 
 export const ImageContainer = styled.div`
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 250px;
   background-image: url("/background-images/avatar.png");
   background-position: center;
   background-size: cover;
@@ -92,7 +92,6 @@ export const MetricScores = styled.div`
   overflow: auto;
 
   h1 {
-    color: white;
     text-align: center;
   }
 
@@ -110,6 +109,7 @@ export const MetricScores = styled.div`
 
     p {
       font-size: 40px;
+      font-weight: bold;
     }
   }
 

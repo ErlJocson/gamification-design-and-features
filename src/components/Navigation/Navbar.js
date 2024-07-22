@@ -30,11 +30,11 @@ export default function Navbar() {
           </p>
           <p>
             <FaShoppingCart />
-            <MyLink>SHOP</MyLink>
+            <MyLink to="/shop">SHOP</MyLink>
           </p>
           <p>
             <ImRoad />
-            <MyLink>PRACTICE TRACKS</MyLink>
+            <MyLink to="/practice-tracks">PRACTICE TRACKS</MyLink>
           </p>
         </LeftItems>
 

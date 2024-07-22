@@ -13,19 +13,11 @@ export const MainComponentContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  height: 100%;
+  height: 80%;
   margin: 50px auto;
   width: 80%;
-  background-color: rgba(54, 54, 54, 0.6);
+  background-color: #cec8b88a;
   padding: 20px;
-
-  h3 {
-    color: white;
-  }
-
-  h1 {
-    color: white;
-  }
 `;
 
 export const MainContentContainer = styled.div`
@@ -53,9 +45,10 @@ export const TeamTable = styled.table`
 `;
 
 export const TableContainer = styled.div`
-  max-height: 500px;
+  height: 45vh;
   overflow: auto;
-
+  display: flex;
+  justify-content: center;
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;

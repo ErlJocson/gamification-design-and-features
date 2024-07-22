@@ -1,5 +1,3 @@
-import React from "react";
-
 import { IoCall } from "react-icons/io5";
 import {
   MainPageContainer,
@@ -22,30 +20,30 @@ export default function MainPage() {
                 <div>
                   <p>
                     <IoCall />
-                    <strong>Metric 1</strong>
+                    <strong>AHT</strong>
                   </p>
-                  <p>100%</p>
+                  <h3>300s</h3>
                 </div>
                 <div>
                   <p>
                     <IoCall />
-                    <strong>Metric 1</strong>
+                    <strong>ATR</strong>
                   </p>
-                  <p>100%</p>
+                  <h3>100%</h3>
                 </div>
                 <div>
                   <p>
                     <IoCall />
-                    <strong>Metric 1</strong>
+                    <strong>CSAT</strong>
                   </p>
-                  <p>100%</p>
+                  <h3>100%</h3>
                 </div>
                 <div>
                   <p>
                     <IoCall />
-                    <strong>Metric 1</strong>
+                    <strong>AR</strong>
                   </p>
-                  <p>100%</p>
+                  <h3>NA</h3>
                 </div>
               </MetricTable>
             </MetricContainer>

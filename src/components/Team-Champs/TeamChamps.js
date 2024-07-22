@@ -26,7 +26,7 @@ const TeamChamps = () => {
                   <th>Score</th>
                 </TableRowHeader>
                 {links.map((link, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td>{link.rank}</td>
                     <td>{link.employee}</td>
                     <td>{link.metric}</td>
