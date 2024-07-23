@@ -6,8 +6,8 @@ const LoginPage = () => {
   useEffect(() => {
     const newElement = document.createElement("video");
 
-    newElement.setAttribute("autoplay", true);
-    newElement.setAttribute("loop", true);
+    newElement.autoplay = true;
+    newElement.loop = true;
 
     const newElement2 = document.createElement("source");
 

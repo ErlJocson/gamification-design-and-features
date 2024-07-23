@@ -108,6 +108,12 @@ export const Gauge = styled.div`
       width: 15px;
       background-color: #4c4c4c;
     }
+
+    .line-bar {
+      height: 25px;
+      background-color: #ffffff;
+      width: 2px;
+    }
   }
 
   h3 {

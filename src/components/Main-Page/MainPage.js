@@ -58,6 +58,7 @@ export default function MainPage() {
                       className="progress-bar"
                       style={{ width: "180px" }}
                     ></div>
+                    <div className="line-bar"></div>
                     <div
                       className="progress-bar-unfilled"
                       style={{ width: "180px" }}
@@ -77,6 +78,7 @@ export default function MainPage() {
                       className="progress-bar"
                       style={{ width: "200px" }}
                     ></div>
+                    <div className="line-bar"></div>
                     <div
                       className="progress-bar-unfilled"
                       style={{ width: "160px" }}
@@ -96,6 +98,7 @@ export default function MainPage() {
                       className="progress-bar"
                       style={{ width: "200px" }}
                     ></div>
+                    <div className="line-bar"></div>
                     <div
                       className="progress-bar-unfilled"
                       style={{ width: "160px" }}
@@ -115,6 +118,7 @@ export default function MainPage() {
                       className="progress-bar"
                       style={{ width: "100px" }}
                     ></div>
+                    <div className="line-bar"></div>
                     <div
                       className="progress-bar-unfilled"
                       style={{ width: "260px" }}
