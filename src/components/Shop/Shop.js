@@ -7,18 +7,44 @@ import {
   DriverEarnings,
   ContentContainers,
   MainContents,
+  CarouselItem,
 } from "./ShopStyles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Shop() {
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+
+    return () => {
+      document.body.style.backgroundImage = "";
+    };
+  }, []);
+
   const pictures = [
-    process.env.PUBLIC_URL + "/background-images/carousel/1.png",
-    process.env.PUBLIC_URL + "/background-images/carousel/2.png",
-    process.env.PUBLIC_URL + "/background-images/carousel/3.png",
-    process.env.PUBLIC_URL + "/background-images/carousel/4.png",
-    process.env.PUBLIC_URL + "/background-images/carousel/5.png",
+    {
+      bg: process.env.PUBLIC_URL + "/background-images/carousel/1.png",
+      amount: 501,
+    },
+    {
+      bg: process.env.PUBLIC_URL + "/background-images/carousel/2.png",
+      amount: 199,
+    },
+    {
+      bg: process.env.PUBLIC_URL + "/background-images/carousel/3.png",
+      amount: 52,
+    },
+    {
+      bg: process.env.PUBLIC_URL + "/background-images/carousel/4.png",
+      amount: 177,
+    },
+    {
+      bg: process.env.PUBLIC_URL + "/background-images/carousel/5.png",
+      amount: 298,
+    },
   ];
 
   const handleNext = () => {
@@ -43,19 +69,29 @@ export default function Shop() {
         <MainContents>
           <Top>
             <DriverName>Rohit Sharma</DriverName>
-            <DriverEarnings>Earnings: 1000</DriverEarnings>
+            <div>
+              <DriverEarnings>Earnings: 1000</DriverEarnings>
+              <DriverEarnings>
+                After Purchase: {1000 - visibleSlides[2].amount}
+              </DriverEarnings>
+            </div>
           </Top>
           <ContentContainers>
             <Carousel>
               {visibleSlides.map((picture, i) => (
-                <img
-                  src={picture}
-                  key={i}
-                  alt=""
-                  style={{
-                    width: i === 2 ? "200px" : "150px",
-                  }}
-                />
+                <CarouselItem>
+                  <p>{picture.amount} $</p>
+                  <img
+                    src={picture.bg}
+                    className="dark-shadow"
+                    key={i}
+                    alt=""
+                    style={{
+                      height: i === 2 ? "280px" : "150px",
+                      width: "180px",
+                    }}
+                  />
+                </CarouselItem>
               ))}
             </Carousel>
 

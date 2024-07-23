@@ -4,7 +4,7 @@ import { RiTeamLine } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
 import { ImRoad } from "react-icons/im";
 import { BiCalendarExclamation } from "react-icons/bi";
-import { NavbarContainer, LeftItems, RightItems, MyLink } from "./NarbarStyles";
+import { NavbarContainer, LeftItems, MyLink } from "./NarbarStyles";
 import { IoMdHome } from "react-icons/io";
 
 export default function Navbar() {
@@ -13,37 +13,71 @@ export default function Navbar() {
       <NavbarContainer>
         <LeftItems>
           <p>
-            <IoMdHome />
-            <MyLink to="/">HOME</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/"
+            >
+              <IoMdHome /> HOME
+            </MyLink>
           </p>
           <p>
-            <FaRankingStar />
-            <MyLink to="/your-standing">YOUR STANDINGS</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/your-standing"
+            >
+              <FaRankingStar /> YOUR STANDINGS
+            </MyLink>
           </p>
           <p>
-            <FaTrophy />
-            <MyLink to="/champions">CHAMPIONS</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/champions"
+            >
+              <FaTrophy /> CHAMPIONS
+            </MyLink>
           </p>
           <p>
-            <RiTeamLine />
-            <MyLink to="/team-champs">TEAM CHAMPS</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/team-champs"
+            >
+              <RiTeamLine /> TEAM CHAMPS
+            </MyLink>
           </p>
           <p>
-            <FaShoppingCart />
-            <MyLink to="/shop">SHOP</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/shop"
+            >
+              <FaShoppingCart /> SHOP
+            </MyLink>
           </p>
           <p>
-            <ImRoad />
-            <MyLink to="/practice-tracks">PRACTICE TRACKS</MyLink>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/practice-tracks"
+            >
+              <ImRoad /> PRACTICE TRACKS
+            </MyLink>
+          </p>
+          <p>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/challenges"
+            >
+              <BiCalendarExclamation /> CHALLENGES
+            </MyLink>
+          </p>
+
+          <p>
+            <MyLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/pitstop"
+            >
+              <BiCalendarExclamation /> PITSTOP
+            </MyLink>
           </p>
         </LeftItems>
-
-        <RightItems>
-          <p>
-            <BiCalendarExclamation />
-            <MyLink to="/challenges">CHALLENGES</MyLink>
-          </p>
-        </RightItems>
       </NavbarContainer>
     </>
   );

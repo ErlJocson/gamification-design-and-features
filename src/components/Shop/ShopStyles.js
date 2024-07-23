@@ -35,14 +35,37 @@ export const NavigationButtons = styled.div`
     border: none;
     cursor: pointer;
     border-radius: 25px;
+    transition: all 500ms;
+  }
+
+  button:hover {
+    background-color: #878787b6;
+    color: white;
   }
 `;
 
 export const Carousel = styled.div`
+  display: flex;
+  align-items: end;
   img {
-    border-radius: 25px;
     margin: 10px;
   }
+
+  p {
+    text-align: center;
+    color: black;
+
+    font-size: 15px;
+    background-color: rgba(243, 243, 243, 0.597);
+    width: 100px;
+    padding: 5px 10px;
+  }
+`;
+
+export const CarouselItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ContentContainers = styled.div`

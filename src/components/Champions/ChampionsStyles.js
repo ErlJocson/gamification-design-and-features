@@ -97,7 +97,7 @@ export const MetricScores = styled.div`
 
   div {
     text-align: center;
-    background-color: #00000081;
+    background-color: #000000b2;
     margin: 10px;
     padding: 5px 0;
     min-width: 200px;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const MainComponentContainer = styled.div`
   height: calc(100vh - 80px);
-  background-image: url("/background-images/team-champs.png");
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -46,10 +45,14 @@ export const TeamTable = styled.table`
       text-align: center;
     }
   }
+
+  div {
+    overflow: auto;
+  }
 `;
 
 export const TableContainer = styled.div`
-  height: 45vh;
+  height: 60vh;
   overflow: auto;
   display: flex;
   justify-content: center;
@@ -57,4 +60,12 @@ export const TableContainer = styled.div`
     width: 8px;
     height: 8px;
   }
+`;
+
+export const NameContainer = styled.div`
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;

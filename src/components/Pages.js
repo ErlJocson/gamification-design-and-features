@@ -8,6 +8,7 @@ import Shop from "./Shop/Shop";
 import PracticeTracks from "./Practice-Tracks/PracticeTracks";
 import Questions from "./Questions/Questions";
 import Challenges from "./Challenges/Challenges";
+import Pitstop from "./PitStop/Pitstop";
 
 export {
   LoginPage,
@@ -20,4 +21,5 @@ export {
   PracticeTracks,
   Questions,
   Challenges as Challenge,
+  Pitstop,
 };

@@ -82,8 +82,8 @@ export const RankContainer = styled.div`
   justify-content: center;
   width: 150px;
   height: 200px;
-
-  background-color: rgb(255, 255, 255);
+  color: white;
+  background-color: rgb(43, 43, 43);
 
   h3 {
     font-size: 80px;

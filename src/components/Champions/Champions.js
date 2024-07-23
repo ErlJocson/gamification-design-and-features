@@ -11,8 +11,19 @@ import {
   FirstTableRow,
 } from "./ChampionsStyles";
 import { links } from "./ChampionsList";
+import { useEffect } from "react";
 
 const Champions = () => {
+  useEffect(() => {
+    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+
+    return () => {
+      document.body.style.backgroundImage = "";
+    };
+  }, []);
+
   return (
     <>
       <MainPageContainerChampions>
@@ -32,22 +43,7 @@ const Champions = () => {
                 <p className="text-gradient">100%</p>
               </ScoreContainer>
             </PictureContainer>
-            <OverallRankingContainer>
-              <table>
-                <FirstTableRow>
-                  <th>Rank</th>
-                  <th>Driver</th>
-                  <th>Score</th>
-                </FirstTableRow>
-                {links.map((link, index) => (
-                  <tr>
-                    <td>{link.rank}</td>
-                    <td>{link.employee}</td>
-                    <td>{link.score}</td>
-                  </tr>
-                ))}
-              </table>
-            </OverallRankingContainer>
+
             <MetricScores>
               <h1>Metric Scores</h1>
               <div>
@@ -67,6 +63,22 @@ const Champions = () => {
                 <p className="text-gradient">NA</p>
               </div>
             </MetricScores>
+            <OverallRankingContainer>
+              <table>
+                <FirstTableRow>
+                  <th>Rank</th>
+                  <th>Driver</th>
+                  <th>Score</th>
+                </FirstTableRow>
+                {links.map((link, index) => (
+                  <tr>
+                    <td>{link.rank}</td>
+                    <td>{link.employee}</td>
+                    <td>{link.score}</td>
+                  </tr>
+                ))}
+              </table>
+            </OverallRankingContainer>
           </MainContentContainer>
         </ContentContainer>
       </MainPageContainerChampions>

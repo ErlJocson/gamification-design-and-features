@@ -9,6 +9,7 @@ import {
   Shop,
   PracticeTracks,
   Challenge,
+  Pitstop,
 } from "./components/Pages";
 import {
   HashRouter as Router,
@@ -33,6 +34,7 @@ function RouterComponent() {
         <Route path="/shop" exact element={<Shop />} />
         <Route path="/practice-tracks" exact element={<PracticeTracks />} />
         <Route path="/challenges" exact element={<Challenge />} />
+        <Route path="/pitstop" exact element={<Pitstop />} />
       </Routes>
     </>
   );

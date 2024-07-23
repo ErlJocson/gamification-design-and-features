@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
   position: fixed;
@@ -8,42 +8,41 @@ export const NavbarContainer = styled.div`
   bottom: 0;
   height: 80px;
   color: white;
-  background-color: rgba(54, 54, 54, 0.94);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
 export const LeftItems = styled.div`
   display: flex;
-  margin-left: 100px;
-  p {
-    display: flex;
-    align-items: center;
-
-    margin: 0 10px;
-    strong {
-      margin-left: 6px;
-    }
-  }
 `;
 
-export const RightItems = styled.div`
-  margin-right: 100px;
-  p {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-export const MyLink = styled(Link)`
-  margin-left: 6px;
-  color: white;
+export const MyLink = styled(NavLink)`
+  border: 1px solid white;
+  margin: 0 4px;
+  color: black;
   text-decoration: none;
   transition: all 500ms;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  * {
+    margin: 0 2px;
+  }
 
   &:hover {
-    color: rgba(183, 183, 183, 0.94);
-    transform: translateY(-6px);
+    color: white;
+    background-color: black;
+  }
+
+  &:active {
+    color: white;
+    background-color: black;
+  }
+
+  &.active {
+    color: white;
+    background-color: black;
   }
 `;

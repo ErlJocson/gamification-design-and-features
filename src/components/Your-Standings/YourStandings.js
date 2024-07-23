@@ -10,8 +10,19 @@ import {
   ImageContainer,
   ScoreCardsContainer,
 } from "./YourStandingsStyles";
+import { useEffect } from "react";
 
 const YourStandings = () => {
+  useEffect(() => {
+    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+
+    return () => {
+      document.body.style.backgroundImage = "";
+    };
+  }, []);
+
   return (
     <>
       <MainPageContainerYourStanding>
@@ -46,7 +57,7 @@ const YourStandings = () => {
                 </ScoreCards>
                 <ScoreCards>
                   <h3>ASSESSMENT</h3>
-                  <p className="text-gradient">100 | 50</p>
+                  <p className="text-gradient">4 | 10</p>
                 </ScoreCards>
               </ScoreCardsContainer>
             </ScoreContainer>
