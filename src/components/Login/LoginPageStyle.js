@@ -18,7 +18,7 @@ export const LoginForm = styled.form`
   border-top: 2px solid white;
   color: white;
   width: 500px;
-  background-color: #283238;
+  background-color: #283238b1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

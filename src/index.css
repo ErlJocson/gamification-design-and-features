@@ -159,14 +159,14 @@ body {
 }
 
 body {
-  height: calc(100vh - 80px);
+  height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 .text-gradient {
-  font-size: 72px;
   background: -webkit-linear-gradient(#9c99ff, #0f1eed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

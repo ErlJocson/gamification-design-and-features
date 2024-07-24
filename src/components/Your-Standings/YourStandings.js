@@ -1,22 +1,20 @@
 import {
   MainPageContainerYourStanding,
-  NameContainer,
-  StandingContainer,
-  ImageAndRankContainer,
-  ContentContainer,
+  ContentCotainer,
   RankContainer,
-  ScoreContainer,
-  ScoreCards,
-  ImageContainer,
-  ScoreCardsContainer,
+  DetailsContainer,
+  PictureContainer,
+  MetricContainer,
+  NameContainer,
+  MetricTitle,
 } from "./YourStandingsStyles";
 import { useEffect } from "react";
+import { FaMedal } from "react-icons/fa";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const YourStandings = () => {
   useEffect(() => {
     document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundRepeat = "no-repeat";
 
     return () => {
       document.body.style.backgroundImage = "";
@@ -26,43 +24,63 @@ const YourStandings = () => {
   return (
     <>
       <MainPageContainerYourStanding>
-        <ContentContainer>
-          <NameContainer>
-            <h2>ROHIT SHARMA</h2>
-            <h2>June 2024</h2>
-          </NameContainer>
-          <StandingContainer>
-            <ImageAndRankContainer>
-              <ImageContainer
-                src={process.env.PUBLIC_URL + "/background-images/avatar.png"}
+        <ContentCotainer>
+          <RankContainer>
+            <FaMedal />
+            Rank 6
+          </RankContainer>
+          <DetailsContainer>
+            <PictureContainer>
+              <NameContainer>Rohit Sharma</NameContainer>
+              <img
+                src="/gamification-design-and-features/avatar/avatar.png"
+                alt=""
               />
-              <RankContainer>
-                <h1>RANK</h1>
-                <h3>02</h3>
-              </RankContainer>
-            </ImageAndRankContainer>
-            <ScoreContainer>
-              <ScoreCardsContainer>
-                <ScoreCards>
-                  <h3>EARNINGS</h3>
-                  <p className="text-gradient">100</p>
-                </ScoreCards>
-                <ScoreCards>
-                  <h3>BADGES</h3>
-                  <p className="text-gradient">100</p>
-                </ScoreCards>
-                <ScoreCards>
-                  <h3>RACE WON</h3>
-                  <p className="text-gradient">100</p>
-                </ScoreCards>
-                <ScoreCards>
-                  <h3>ASSESSMENT</h3>
-                  <p className="text-gradient">4 | 10</p>
-                </ScoreCards>
-              </ScoreCardsContainer>
-            </ScoreContainer>
-          </StandingContainer>
-        </ContentContainer>
+            </PictureContainer>
+            <MetricContainer>
+              <div>
+                <div>
+                  <MetricTitle>Earnings</MetricTitle>
+                  <p>1000</p>
+                </div>
+                <div>
+                  <MetricTitle>
+                    Badges
+                    <IoIosAddCircleOutline
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    />
+                  </MetricTitle>
+                  <p className="all-badges">
+                    <img
+                      src="/gamification-design-and-features/badges/Picture1.png"
+                      alt=""
+                    />
+                    <img
+                      src="/gamification-design-and-features/badges/Picture2.png"
+                      alt=""
+                    />
+                    <img
+                      src="/gamification-design-and-features/badges/Picture3.png"
+                      alt=""
+                    />
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <MetricTitle>Race Won</MetricTitle>
+                  <p>100</p>
+                </div>
+                <div>
+                  <MetricTitle>Assessment</MetricTitle>
+                  <p>5 | 7</p>
+                </div>
+              </div>
+            </MetricContainer>
+          </DetailsContainer>
+        </ContentCotainer>
       </MainPageContainerYourStanding>
     </>
   );

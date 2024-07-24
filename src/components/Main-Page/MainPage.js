@@ -14,8 +14,6 @@ import Button from "./Button";
 export default function MainPage() {
   useEffect(() => {
     document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundRepeat = "no-repeat";
 
     return () => {
       document.body.style.backgroundImage = "";

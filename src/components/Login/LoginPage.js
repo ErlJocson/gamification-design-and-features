@@ -8,6 +8,7 @@ const LoginPage = () => {
 
     newElement.autoplay = true;
     newElement.loop = true;
+    newElement.muted = true;
 
     const newElement2 = document.createElement("source");
 
