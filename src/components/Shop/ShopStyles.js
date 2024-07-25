@@ -22,6 +22,7 @@ export const Top = styled.div`
 
 export const DriverEarnings = styled.h3`
   color: white;
+  border-top: 2px solid white;
   background-color: #283238ca;
   padding: 10px;
 `;
@@ -63,6 +64,7 @@ export const Carousel = styled.div`
 `;
 
 export const CarouselItem = styled.div`
+  border-top: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;

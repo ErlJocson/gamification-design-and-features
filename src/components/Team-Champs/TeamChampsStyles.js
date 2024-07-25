@@ -2,31 +2,9 @@ import styled from "styled-components";
 
 export const MainComponentContainer = styled.div`
   height: calc(100vh - 80px);
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-`;
-
-export const ContentContainer = styled.div`
-  height: 80%;
-  margin: 50px auto;
-  width: 80%;
-  padding: 20px;
-  h3,
-  h1 {
-    color: white;
-  }
-`;
-
-export const MainContentContainer = styled.div`
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const TableRowHeader = styled.tr`
@@ -35,37 +13,83 @@ export const TableRowHeader = styled.tr`
 `;
 
 export const TeamTable = styled.table`
-  margin: 10px auto 0 auto;
-  width: 100%;
-  background-color: #ffffff6e;
+  background-color: #283238ca;
+  border-top: 2px solid white;
+  color: white;
 
   tr {
     * {
-      padding: 8px 100px;
+      padding: 8px 30px;
       text-align: center;
     }
-  }
-
-  div {
-    overflow: auto;
   }
 `;
 
 export const TableContainer = styled.div`
-  height: 60vh;
-  overflow: auto;
+  max-height: 450px;
+  margin: 0 10px;
+`;
+
+export const LeftContainer = styled.div`
   display: flex;
-  justify-content: center;
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  flex-direction: column;
+  background-color: #283238ca;
+  padding: 20px;
+  border-top: 2px solid white;
+  color: white;
+  margin: 0 10px;
+  margin-top: 45px;
+  .avatar {
+    height: 300px;
+  }
+
+  .bose-logo {
+    margin-bottom: 18px;
   }
 `;
 
-export const NameContainer = styled.div`
-  margin-top: 20px;
-  color: white;
+export const TableContents = styled.div`
   display: flex;
+  color: white;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+`;
+
+export const ButtonContainer = styled.div`
+  a {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 0 10px;
+    transition: all 500ms;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+
+  a:hover {
+    color: white;
+    background-color: black;
+  }
+`;
+
+export const MainTableContainer = styled.div`
+  max-height: 450px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #333;
+  }
 `;

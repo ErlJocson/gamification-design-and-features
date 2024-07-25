@@ -1,11 +1,12 @@
 import {
   MainComponentContainer,
-  ContentContainer,
   TeamTable,
   TableRowHeader,
-  MainContentContainer,
+  LeftContainer,
   TableContainer,
-  NameContainer,
+  TableContents,
+  ButtonContainer,
+  MainTableContainer,
 } from "./TeamChampsStyles";
 import { links } from "./ChampList";
 import { useEffect } from "react";
@@ -27,35 +28,48 @@ const TeamChamps = () => {
   return (
     <>
       <MainComponentContainer>
-        <MainContentContainer>
-          <NameContainer>
-            <h1>Rohit Sharma</h1>
-            <h1>2nd Rank</h1>
-            <h3>Bose</h3>
-          </NameContainer>
-
-          <ContentContainer>
-            <TableContainer>
-              <TeamTable>
-                <TableRowHeader>
-                  <th>Rank</th>
-                  <th>Driver</th>
-                  <th>Team Lead</th>
-                  <th>Score</th>
-                </TableRowHeader>
-
-                {links.map((link, index) => (
-                  <tr key={index}>
-                    <td>{link.rank}</td>
-                    <td>{link.employee}</td>
-                    <td>{link.metric}</td>
-                    <td>{link.score}</td>
-                  </tr>
-                ))}
-              </TeamTable>
-            </TableContainer>
-          </ContentContainer>
-        </MainContentContainer>
+        <LeftContainer>
+          <img
+            src="/gamification-design-and-features/logo/bose.svg"
+            alt=""
+            className="bose-logo"
+          />
+          <h3>Rohit Sharma</h3>
+          <h4>72.3%</h4>
+          <img
+            className="avatar"
+            src="/gamification-design-and-features/avatar/avatar.png"
+            alt=""
+          />
+        </LeftContainer>
+        <TableContainer>
+          <TableContents>
+            <ButtonContainer>
+              <a>Daily</a>
+              <a>Weekly</a>
+              <a>Monthly</a>
+            </ButtonContainer>
+            <h3>June 2024</h3>
+          </TableContents>
+          <MainTableContainer>
+            <TeamTable>
+              <TableRowHeader>
+                <th>Rank</th>
+                <th>Driver</th>
+                <th>Lead</th>
+                <th>Score</th>
+              </TableRowHeader>
+              {links.map((link, index) => (
+                <tr key={index}>
+                  <td>{link.rank}</td>
+                  <td>{link.employee}</td>
+                  <td>{link.metric}</td>
+                  <td>{link.score}</td>
+                </tr>
+              ))}
+            </TeamTable>
+          </MainTableContainer>
+        </TableContainer>
       </MainComponentContainer>
     </>
   );

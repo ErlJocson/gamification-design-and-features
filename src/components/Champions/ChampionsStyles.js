@@ -108,3 +108,25 @@ export const OverallScore = styled.div`
   padding: 5px;
   margin: 4px;
 `;
+
+export const TableTitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ButtonContainer = styled.div`
+  a {
+    margin: 0 10px;
+    padding: 0 10px;
+    transition: all 500ms;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+
+  a:hover {
+    color: white;
+    background-color: black;
+  }
+`;

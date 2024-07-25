@@ -9,12 +9,17 @@ import {
   Scores,
   LeftContent,
   TableContainer,
+  TableTitleContainer,
+  ButtonContainer,
 } from "./ChampionsStyles";
-import { links } from "./ChampionsList";
-import { useEffect } from "react";
+import { links, links2, links3 } from "./ChampionsList";
+import { useEffect, useState } from "react";
 import { imageLinks } from "../background-images-links/Links";
 
 const Champions = () => {
+  const [granularity, setGranularity] = useState("Monthly");
+  const [datasetToUse, setDataSetToUse] = useState(links3);
+
   useEffect(() => {
     const numbers = Math.floor(Math.random() * imageLinks.length);
 
@@ -64,7 +69,47 @@ const Champions = () => {
           </LeftContent>
 
           <OverallRankingContainer>
-            <h3>June 2024</h3>
+            <TableTitleContainer>
+              <ButtonContainer>
+                <a
+                  style={{
+                    backgroundColor: granularity === "Daily" ? "black" : "",
+                    color: granularity === "Daily" ? "white" : "",
+                  }}
+                  onClick={() => {
+                    setGranularity("Daily");
+                    setDataSetToUse(links);
+                  }}
+                >
+                  Daily
+                </a>
+                <a
+                  style={{
+                    backgroundColor: granularity === "Weekly" ? "black" : "",
+                    color: granularity === "Weekly" ? "white" : "",
+                  }}
+                  onClick={() => {
+                    setGranularity("Weekly");
+                    setDataSetToUse(links2);
+                  }}
+                >
+                  Weekly
+                </a>
+                <a
+                  style={{
+                    backgroundColor: granularity === "Monthly" ? "black" : "",
+                    color: granularity === "Monthly" ? "white" : "",
+                  }}
+                  onClick={() => {
+                    setGranularity("Monthly");
+                    setDataSetToUse(links3);
+                  }}
+                >
+                  Monthly
+                </a>
+              </ButtonContainer>
+              <h3>June 2024</h3>
+            </TableTitleContainer>
             <TableContainer>
               <table>
                 <FirstTableRow>
@@ -72,11 +117,11 @@ const Champions = () => {
                   <th>Driver</th>
                   <th>Score</th>
                 </FirstTableRow>
-                {links.map((link, index) => (
+                {datasetToUse.map((link, index) => (
                   <tr
                     key={index}
                     style={{
-                      color: index === 5 ? "red" : "white",
+                      color: link.employee === "Rohit Sharma" ? "red" : "white",
                     }}
                   >
                     <td>{link.rank}</td>

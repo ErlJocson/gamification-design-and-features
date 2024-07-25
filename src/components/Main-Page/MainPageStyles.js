@@ -85,6 +85,7 @@ export const Gauge = styled.div`
   .progress {
     display: flex;
     align-items: center;
+    justify-content: center;
     .progress-bar {
       background-color: white;
       height: 10px;
@@ -96,14 +97,14 @@ export const Gauge = styled.div`
     }
 
     .bar {
-      margin: 0 10px;
+      margin: 0 5px;
       height: 20px;
       width: 15px;
       background-color: white;
     }
 
     .bar-black {
-      margin: 0 10px;
+      margin: 0 5px;
       height: 20px;
       width: 15px;
       background-color: #4c4c4c;
@@ -124,5 +125,20 @@ export const Gauge = styled.div`
     letter-spacing: 2px;
     font-weight: normal;
     font-style: italic;
+  }
+`;
+
+export const CustomizationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  p {
+    display: flex;
+    align-items: center;
+    color: white;
+    * {
+      margin: 0 8px;
+    }
   }
 `;

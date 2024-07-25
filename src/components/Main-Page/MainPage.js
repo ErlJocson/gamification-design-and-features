@@ -6,6 +6,7 @@ import {
   TextContainer,
   Gauge,
   MetricType,
+  CustomizationContainer,
 } from "./MainPageStyles";
 import { useEffect, useState } from "react";
 import { IoCarSportOutline } from "react-icons/io5";
@@ -43,12 +44,6 @@ export default function MainPage() {
                 <h3>ROHIT SHARMA</h3>
                 <h4>Performance for the month of June</h4>
               </div>
-              <p>
-                <IoCarSportOutline
-                  style={{ color: "white", fontSize: "48px" }}
-                />
-                95.0%
-              </p>
             </TextContainer>
             <MetricTable>
               <MetricType>
@@ -136,11 +131,25 @@ export default function MainPage() {
           <MetricContainer>
             <TextContainer></TextContainer>
             <MetricTable>
-              <div>
+              <CustomizationContainer>
                 <h3 className="h3-title">CUSTOMIZATION RATING</h3>
-              </div>
+                <p>
+                  <IoCarSportOutline
+                    style={{ color: "white", fontSize: "48px" }}
+                  />
+                  95.0%
+                </p>
+              </CustomizationContainer>
+
               <Gauge>
                 <div className="progress">
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
                   <div className="bar"></div>
                   <div className="bar"></div>
                   <div className="bar"></div>
