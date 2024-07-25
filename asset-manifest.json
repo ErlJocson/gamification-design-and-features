@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gamification-design-and-features/static/css/main.a116c4b5.css",
-    "main.js": "/gamification-design-and-features/static/js/main.988be984.js",
+    "main.js": "/gamification-design-and-features/static/js/main.b06ea38c.js",
     "index.html": "/gamification-design-and-features/index.html",
     "main.a116c4b5.css.map": "/gamification-design-and-features/static/css/main.a116c4b5.css.map",
-    "main.988be984.js.map": "/gamification-design-and-features/static/js/main.988be984.js.map"
+    "main.b06ea38c.js.map": "/gamification-design-and-features/static/js/main.b06ea38c.js.map"
   },
   "entrypoints": [
     "static/css/main.a116c4b5.css",
-    "static/js/main.988be984.js"
+    "static/js/main.b06ea38c.js"
   ]
 }
