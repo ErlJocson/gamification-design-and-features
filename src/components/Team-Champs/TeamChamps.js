@@ -8,11 +8,14 @@ import {
   ButtonContainer,
   MainTableContainer,
 } from "./TeamChampsStyles";
-import { links } from "./ChampList";
-import { useEffect } from "react";
+import { links, links2, links3 } from "./ChampList";
+import { useEffect, useState } from "react";
 import { imageLinks } from "../background-images-links/Links";
 
 const TeamChamps = () => {
+  const [granularity, setGranularity] = useState("Monthly");
+  const [datasetToUse, setDataSetToUse] = useState(links3);
+
   useEffect(() => {
     const numbers = Math.floor(Math.random() * imageLinks.length);
 
@@ -45,9 +48,42 @@ const TeamChamps = () => {
         <TableContainer>
           <TableContents>
             <ButtonContainer>
-              <a>Daily</a>
-              <a>Weekly</a>
-              <a>Monthly</a>
+              <a
+                style={{
+                  backgroundColor: granularity === "Daily" ? "black" : "",
+                  color: granularity === "Daily" ? "white" : "",
+                }}
+                onClick={() => {
+                  setGranularity("Daily");
+                  setDataSetToUse(links);
+                }}
+              >
+                Daily
+              </a>
+              <a
+                style={{
+                  backgroundColor: granularity === "Weekly" ? "black" : "",
+                  color: granularity === "Weekly" ? "white" : "",
+                }}
+                onClick={() => {
+                  setGranularity("Weekly");
+                  setDataSetToUse(links2);
+                }}
+              >
+                Weekly
+              </a>
+              <a
+                style={{
+                  backgroundColor: granularity === "Monthly" ? "black" : "",
+                  color: granularity === "Monthly" ? "white" : "",
+                }}
+                onClick={() => {
+                  setGranularity("Monthly");
+                  setDataSetToUse(links3);
+                }}
+              >
+                Monthly
+              </a>
             </ButtonContainer>
             <h3>June 2024</h3>
           </TableContents>
@@ -59,8 +95,13 @@ const TeamChamps = () => {
                 <th>Lead</th>
                 <th>Score</th>
               </TableRowHeader>
-              {links.map((link, index) => (
-                <tr key={index}>
+              {datasetToUse.map((link, index) => (
+                <tr
+                  key={index}
+                  style={{
+                    color: link.employee === "Rohit Sharma" ? "red" : "white",
+                  }}
+                >
                   <td>{link.rank}</td>
                   <td>{link.employee}</td>
                   <td>{link.metric}</td>
