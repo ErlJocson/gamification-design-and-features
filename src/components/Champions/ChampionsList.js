@@ -1,7 +1,7 @@
 export const links = [
   {
     rank: 1,
-    employee: "Rohit Sharma",
+    employee: "Liam Swimmer",
     score: "100%",
   },
   {
@@ -26,7 +26,7 @@ export const links = [
   },
   {
     rank: 6,
-    employee: "Lucas Hayes",
+    employee: "Rohit Sharma",
     score: "95%",
   },
   {

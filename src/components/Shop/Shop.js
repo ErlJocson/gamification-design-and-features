@@ -3,19 +3,21 @@ import {
   NavigationButtons,
   Top,
   Carousel,
-  DriverName,
   DriverEarnings,
   ContentContainers,
   MainContents,
   CarouselItem,
 } from "./ShopStyles";
 import { useState, useEffect } from "react";
+import { imageLinks } from "../background-images-links/Links";
 
 export default function Shop() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    const numbers = Math.floor(Math.random() * imageLinks.length);
+
+    document.body.style.backgroundImage = `url(${imageLinks[numbers]})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 
@@ -27,22 +29,27 @@ export default function Shop() {
   const pictures = [
     {
       bg: process.env.PUBLIC_URL + "/background-images/carousel/1.png",
+      name: "Headset",
       amount: 501,
     },
     {
       bg: process.env.PUBLIC_URL + "/background-images/carousel/2.png",
+      name: "Speaker",
       amount: 199,
     },
     {
       bg: process.env.PUBLIC_URL + "/background-images/carousel/3.png",
+      name: "Mini Speaker",
       amount: 52,
     },
     {
       bg: process.env.PUBLIC_URL + "/background-images/carousel/4.png",
+      name: "Headset and Charger",
       amount: 177,
     },
     {
       bg: process.env.PUBLIC_URL + "/background-images/carousel/5.png",
+      name: "White Headset",
       amount: 298,
     },
   ];
@@ -68,19 +75,17 @@ export default function Shop() {
       <MainContentContainerShop>
         <MainContents>
           <Top>
-            <DriverName>Rohit Sharma</DriverName>
-            <div>
-              <DriverEarnings>Earnings: 1000</DriverEarnings>
-              <DriverEarnings>
-                After Purchase: {1000 - visibleSlides[2].amount}
-              </DriverEarnings>
-            </div>
+            <DriverEarnings>Earnings: 1000</DriverEarnings>
+            <DriverEarnings>
+              After Purchase: {1000 - visibleSlides[2].amount}
+            </DriverEarnings>
           </Top>
           <ContentContainers>
             <Carousel>
               {visibleSlides.map((picture, i) => (
                 <CarouselItem>
-                  <p>{picture.amount} $</p>
+                  <h4>{picture.name}</h4>
+                  <p>$ {picture.amount}</p>
                   <img
                     src={picture.bg}
                     className="dark-shadow"
@@ -97,7 +102,7 @@ export default function Shop() {
 
             <NavigationButtons>
               <button onClick={handleBack}>Back</button>
-              <button>Buy</button>
+              <button>Purchase</button>
               <button onClick={handleNext}>Next</button>
             </NavigationButtons>
           </ContentContainers>

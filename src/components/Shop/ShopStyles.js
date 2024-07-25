@@ -20,12 +20,10 @@ export const Top = styled.div`
   justify-content: space-between;
 `;
 
-export const DriverName = styled.h1`
+export const DriverEarnings = styled.h3`
   color: white;
-`;
-
-export const DriverEarnings = styled.h1`
-  color: white;
+  background-color: #283238ca;
+  padding: 10px;
 `;
 
 export const NavigationButtons = styled.div`
@@ -34,8 +32,8 @@ export const NavigationButtons = styled.div`
     margin: 0 10px;
     border: none;
     cursor: pointer;
-    border-radius: 25px;
     transition: all 500ms;
+    border: 1px solid black;
   }
 
   button:hover {
@@ -53,12 +51,14 @@ export const Carousel = styled.div`
 
   p {
     text-align: center;
-    color: black;
-
+    color: #ff914d;
     font-size: 15px;
-    background-color: rgba(243, 243, 243, 0.597);
     width: 100px;
     padding: 5px 10px;
+  }
+
+  h4 {
+    color: white;
   }
 `;
 
@@ -66,6 +66,9 @@ export const CarouselItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #283238ca;
+  padding: 8px;
+  margin: 5px;
 `;
 
 export const ContentContainers = styled.div`

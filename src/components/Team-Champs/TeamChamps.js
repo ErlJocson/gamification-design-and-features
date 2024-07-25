@@ -9,10 +9,13 @@ import {
 } from "./TeamChampsStyles";
 import { links } from "./ChampList";
 import { useEffect } from "react";
+import { imageLinks } from "../background-images-links/Links";
 
 const TeamChamps = () => {
   useEffect(() => {
-    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    const numbers = Math.floor(Math.random() * imageLinks.length);
+
+    document.body.style.backgroundImage = `url(${imageLinks[numbers]})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 

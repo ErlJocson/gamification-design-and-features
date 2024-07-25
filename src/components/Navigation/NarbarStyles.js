@@ -11,6 +11,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 300000;
 `;
 
 export const LeftItems = styled.div`

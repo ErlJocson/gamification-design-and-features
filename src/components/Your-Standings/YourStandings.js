@@ -11,11 +11,13 @@ import {
 import { useEffect } from "react";
 import { FaMedal } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import { imageLinks } from "../background-images-links/Links";
 
 const YourStandings = () => {
   useEffect(() => {
-    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    const numbers = Math.floor(Math.random() * imageLinks.length);
 
+    document.body.style.backgroundImage = `url(${imageLinks[numbers]})`;
     return () => {
       document.body.style.backgroundImage = "";
     };

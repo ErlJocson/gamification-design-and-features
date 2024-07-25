@@ -10,10 +10,15 @@ import {
 import { useEffect, useState } from "react";
 import { IoCarSportOutline } from "react-icons/io5";
 import Button from "./Button";
+import { imageLinks } from "../background-images-links/Links";
 
 export default function MainPage() {
   useEffect(() => {
-    document.body.style.backgroundImage = `url("/gamification-design-and-features/background-images/Parts/Home.png")`;
+    const numbers = Math.floor(Math.random() * imageLinks.length);
+
+    document.body.style.backgroundImage = `url(${imageLinks[numbers]})`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
 
     return () => {
       document.body.style.backgroundImage = "";
@@ -42,7 +47,7 @@ export default function MainPage() {
                 <IoCarSportOutline
                   style={{ color: "white", fontSize: "48px" }}
                 />
-                72.3%
+                95.0%
               </p>
             </TextContainer>
             <MetricTable>
